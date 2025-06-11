@@ -14,16 +14,13 @@ export default function ExperimentalScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Experimental</Text>
-      
-      <TouchableOpacity 
-        style={[styles.toggleButton, { borderColor: tintColor }]} 
-        onPress={toggleTheme}
-      >
-        <Text style={styles.toggleText}>
-          Mode: {isDarkMode ? 'Dark' : 'Light'}
-        </Text>
+
+      <TouchableOpacity
+        style={[styles.toggleButton, { borderColor: tintColor }]}
+        onPress={toggleTheme}>
+        <Text style={styles.toggleText}>Mode: {isDarkMode ? 'Dark' : 'Light'}</Text>
       </TouchableOpacity>
-      
+
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="app/(tabs)/experimental.tsx" />
     </View>
