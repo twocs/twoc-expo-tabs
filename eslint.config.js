@@ -1,36 +1,58 @@
-// https://docs.expo.dev/guides/using-eslint/
-const { defineConfig } = require('eslint/config');
-const expoConfig = require("eslint-config-expo/flat");
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
-
-module.exports = defineConfig([
-  expoConfig,
-  eslintPluginPrettierRecommended,
+module.exports = [
   {
     ignores: [
-      "dist/*",
-      "/.expo",
-      "node_modules",
+      "**/node_modules/**",
+      "**/.expo/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/coverage/**",
       "ios/**",
       "android/**",
       "assets/**",
-      ".vscode",
-      ".expo-shared"
+      ".vscode/**",
+      ".expo-shared/**",
+      "*.config.js",
+      "metro.config.js",
+      "babel.config.js",
+      "**/*.d.ts",
+      "**/*.log"
     ],
   },
   {
-    files: ["**/__tests__/**/*", "**/*.test.*", "**/*.spec.*"],
+    files: ["**/*.js", "**/*.jsx"],
     languageOptions: {
-      globals: {
-        it: 'readonly',
-        describe: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly',
+      ecmaVersion: 2022,
+      sourceType: "module",
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
+    rules: {
+      "no-console": "warn",
+      "no-unused-vars": "warn",
+    },
   },
-]);
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: require("@typescript-eslint/parser"),
+      ecmaVersion: 2022,
+      sourceType: "module",
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),
+    },
+    rules: {
+      "no-console": "warn",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
+    },
+  },
+];

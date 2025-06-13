@@ -10,3 +10,9 @@ assets/**
 .prettierrc
 eslint.config.js
 dist/**
+*.md
+build
+coverage
+*.log
+metro.config.js
+babel.config.js

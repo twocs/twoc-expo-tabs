@@ -1,5 +1,5 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, { createContext, ReactNode, useContext, useEffect, useState } from 'react';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import React, { createContext, ReactNode, useContext, useEffect, useState } from "react";
 
 interface ThemeContextType {
   isDarkMode: boolean;
@@ -9,7 +9,7 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const THEME_STORAGE_KEY = '@theme_preference';
+const THEME_STORAGE_KEY = "@theme_preference";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         setIsDarkMode(JSON.parse(savedTheme));
       }
     } catch (error) {
-      console.warn('Failed to load theme preference:', error);
+      console.warn("Failed to load theme preference:", error);
       // Keep default value (true for dark mode)
     } finally {
       setIsLoading(false);
@@ -38,7 +38,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     try {
       await AsyncStorage.setItem(THEME_STORAGE_KEY, JSON.stringify(newTheme));
     } catch (error) {
-      console.warn('Failed to save theme preference:', error);
+      console.warn("Failed to save theme preference:", error);
     }
   };
 
@@ -58,7 +58,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 export function useTheme() {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 }
