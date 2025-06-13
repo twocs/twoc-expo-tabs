@@ -1,14 +1,14 @@
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity } from "react-native";
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
-import Colors from '@/constants/Colors';
-import { useTheme } from '@/context/ThemeContext';
+import EditScreenInfo from "@/components/EditScreenInfo";
+import { Text, View } from "@/components/Themed";
+import Colors from "@/constants/Colors";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function ExperimentalScreen() {
   const { isDarkMode, toggleTheme } = useTheme();
 
-  const currentTheme = isDarkMode ? 'dark' : 'light';
+  const currentTheme = isDarkMode ? "dark" : "light";
   const tintColor = Colors[currentTheme].tint;
 
   return (
@@ -18,7 +18,7 @@ export default function ExperimentalScreen() {
       <TouchableOpacity
         style={[styles.toggleButton, { borderColor: tintColor }]}
         onPress={toggleTheme}>
-        <Text style={styles.toggleText}>Mode: {isDarkMode ? 'Dark' : 'Light'}</Text>
+        <Text style={styles.toggleText}>Mode: {isDarkMode ? "Dark" : "Light"}</Text>
       </TouchableOpacity>
 
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
@@ -30,12 +30,12 @@ export default function ExperimentalScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   toggleButton: {
     marginTop: 20,
@@ -46,11 +46,11 @@ const styles = StyleSheet.create({
   },
   toggleText: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   separator: {
     marginVertical: 30,
     height: 1,
-    width: '80%',
+    width: "80%",
   },
 });
