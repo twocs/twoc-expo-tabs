@@ -5,7 +5,6 @@ import { Pressable } from "react-native";
 
 import Colors from "@/constants/Colors";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
-import { useTheme } from "@/context/ThemeContext";
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon(props: {
@@ -16,9 +15,7 @@ function TabBarIcon(props: {
 }
 
 export default function TabLayout() {
-  const { isDarkMode } = useTheme();
-  const colorScheme = isDarkMode ? "dark" : "light";
-
+  const colorScheme = "light"; // Default to light theme
   return (
     <Tabs
       screenOptions={{

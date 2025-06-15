@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         setIsDarkMode(JSON.parse(savedTheme));
       }
     } catch (error) {
-      console.warn("Failed to load theme preference:", error);
+      console.log("Failed to load theme preference:", error);
       // Keep default value (true for dark mode)
     } finally {
       setIsLoading(false);

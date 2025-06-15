@@ -1,3 +1,11 @@
 {
-  "words": ["andeau"]
+  "words": ["andeau", "Pressable"],
+  "import": ["@cspell/dict-html-symbol-entities/cspell-ext.json"],
+  "patterns": [
+    {
+      "name": "html-contractions",
+      "pattern": "/\\b\\w+&apos;\\w+\\b/g"
+    }
+  ],
+  "ignoreRegExpList": ["html-contractions"]
 }
