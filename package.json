@@ -8,10 +8,22 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "expo lint"
+    "test:ci": "jest --no-watchAll --passWithNoTests",
+    "lint": "expo lint",
+    "lint:fix": "expo lint --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "validate": "npm run lint && npm run type-check && echo 'Validation passed!'",
+    "clean": "rm -rf .expo && rm -rf node_modules/.cache"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"],
+    "testPathIgnorePatterns": [
+      "<rootDir>/.history/",
+      "<rootDir>/node_modules/"
+    ]
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

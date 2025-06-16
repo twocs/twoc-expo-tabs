@@ -11,8 +11,9 @@ assets/**
 eslint.config.js
 dist/**
 *.md
+*.txt
+*.log
 build
 coverage
-*.log
 metro.config.js
 babel.config.js
