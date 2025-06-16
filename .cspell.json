@@ -1,5 +1,5 @@
 {
-  "words": ["andeau", "mobileprovision", "Pressable", "tomanderson"],
+  "words": ["andeau", "llms", "mobileprovision", "Pressable", "tomanderson"],
   "import": ["@cspell/dict-html-symbol-entities/cspell-ext.json"],
   "patterns": [
     {

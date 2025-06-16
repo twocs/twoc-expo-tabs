@@ -10,7 +10,6 @@ assets/**
 .prettierrc
 eslint.config.js
 dist/**
-*.md
 *.txt
 *.log
 build

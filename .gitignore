@@ -1,5 +1,9 @@
 .history
 
+# Template specific files to ignore when using as template
+llms*.txt
+check-prettier.sh
+
 # dependencies
 node_modules/
 
