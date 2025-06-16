@@ -84,7 +84,7 @@ git init
 git add .
 git commit -m "Initial template release v1.0.0"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/expo-typescript-theme-template.git
+git remote add origin https://github.com/twocs/expo-typescript-theme-template.git
 git push -u origin main
 ```
 
@@ -92,7 +92,7 @@ git push -u origin main
 
 ```bash
 # Test the template works correctly
-npx create-expo-app TestApp --template https://github.com/YOUR_USERNAME/expo-typescript-theme-template
+npx create-expo-app TestApp --template https://github.com/twocs/expo-typescript-theme-template
 cd TestApp
 ./setup-template.sh TestApp
 npm start

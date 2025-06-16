@@ -7,7 +7,7 @@ Thank you for your interest in contributing! This document provides guidelines f
 1. **Fork the repository**
 2. **Clone your fork:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/expo-typescript-theme-template.git
+   git clone https://github.com/twocs/expo-typescript-theme-template.git
    cd expo-typescript-theme-template
    ```
 3. **Install dependencies:**

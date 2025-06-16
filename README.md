@@ -58,7 +58,7 @@ A modern Expo template with TypeScript, theme management, and comprehensive deve
 1. **Create a new project using this template:**
 
    ```bash
-   npx create-expo-app MyApp --template https://github.com/YOUR_USERNAME/expo-typescript-theme-template
+   npx create-expo-app MyApp --template https://github.com/twocs/expo-typescript-theme-template
    ```
 
 2. **Install dependencies:**

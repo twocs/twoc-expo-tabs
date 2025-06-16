@@ -28,13 +28,13 @@ Run the validation script to ensure everything is ready:
    git add .
    git commit -m "Initial template release"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/expo-typescript-theme-template.git
+   git remote add origin https://github.com/twocs/expo-typescript-theme-template.git
    git push -u origin main
    ```
 
 3. **Test the template:**
    ```bash
-   npx create-expo-app MyTestApp --template https://github.com/YOUR_USERNAME/expo-typescript-theme-template
+   npx create-expo-app MyTestApp --template https://github.com/twocs/expo-typescript-theme-template
    ```
 
 ### Method 2: NPM Package
@@ -114,7 +114,7 @@ Once distributed, users can create new projects with:
 
 ```bash
 # From GitHub template
-npx create-expo-app MyApp --template https://github.com/YOUR_USERNAME/expo-typescript-theme-template
+npx create-expo-app MyApp --template https://github.com/twocs/expo-typescript-theme-template
 
 # From NPM package
 npx create-expo-app MyApp --template @your-username/expo-typescript-theme-template
