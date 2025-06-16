@@ -18,9 +18,11 @@
 
 ## Next Steps for Template Distribution
 
-[ ] Create GitHub repository for the template
-[ ] Test template creation with `npx create-expo-app`
-[ ] Add GitHub issue templates
-[ ] Set up GitHub Actions for CI/CD
-[ ] Publish to npm as a template package
-[ ] Add template to Expo documentation
+[x] Create GitHub repository for the template
+[x] Test template creation with `npx create-expo-app`
+[x] Add GitHub issue templates
+[x] Set up GitHub Actions for CI/CD
+[x] Publish to npm as a template package
+[x] Add template to Expo documentation
+[ ] Ensure that all package.json scripts are fully functional.
+  [ ] Fix problem: `npm run web` -> watchman hanging.
