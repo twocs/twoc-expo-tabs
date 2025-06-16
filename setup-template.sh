@@ -35,12 +35,22 @@ update_app_json() {
     fi
 }
 
+# Function to fetch LLM documentation
+fetch_llm_docs() {
+    echo "📚 Fetching latest Expo LLM documentation..."
+    
+    if [ -f "scripts/fetch-llm-docs.sh" ]; then
+        ./scripts/fetch-llm-docs.sh
+    else
+        echo "⚠️  Warning: fetch-llm-docs.sh script not found. Skipping LLM documentation fetch."
+    fi
+}
+
 # Function to clean up template-specific files
 cleanup_template_files() {
     echo "🧹 Cleaning up template files..."
     
     # Remove template-specific files
-    rm -f llms*.txt
     rm -f check-prettier.sh
     rm -f template.json
     rm -f setup-template.sh
@@ -108,6 +118,9 @@ main() {
     update_package_json
     update_app_json
     
+    # Fetch latest LLM documentation
+    fetch_llm_docs
+    
     # Clean up template files
     cleanup_template_files
     
@@ -122,6 +135,9 @@ main() {
     
     echo ""
     echo "🎉 Template setup complete!"
+    echo ""
+    echo "📚 Note: Latest Expo documentation has been downloaded for AI/LLM assistance."
+    echo "   Use './scripts/fetch-llm-docs.sh' to update documentation anytime."
     echo ""
     echo "Next steps:"
     echo "1. Start the development server: npm start"

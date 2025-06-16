@@ -170,7 +170,38 @@ npm run format:check  # Check if code is formatted
 npm run type-check    # Check TypeScript types
 
 npm run clean         # Clean Expo and node_modules cache
+npm run update-docs   # Update LLM documentation files
 ```
+
+## 🤖 AI/LLM Integration
+
+This template includes built-in support for AI/LLM agents through comprehensive documentation files:
+
+### Automatic Documentation
+
+When you set up a new project, the template automatically downloads the latest Expo documentation:
+
+- `llms.txt` - Overview and links to all Expo documentation
+- `llms-full.txt` - Complete Expo documentation (1.4MB+)
+- `llms-eas.txt` - Expo Application Services documentation
+- `llms-sdk.txt` - Expo SDK documentation
+- `llms-template.txt` - This template's specific documentation
+
+### Updating Documentation
+
+```bash
+npm run update-docs        # Update all LLM documentation files
+./scripts/fetch-llm-docs.sh # Direct script execution
+```
+
+### Benefits for AI Agents
+
+- **Always Up-to-Date**: Documentation is fetched from Expo's official sources
+- **Comprehensive Context**: Full API references and best practices
+- **Template-Specific**: Includes information about this template's structure
+- **Zero Maintenance**: Automatically handled during project setup
+
+The documentation files are ignored by git (see `.gitignore`) and fetched dynamically, ensuring your template stays lean while providing rich context for AI assistance.
 
 ## 📝 Configuration Files
 
